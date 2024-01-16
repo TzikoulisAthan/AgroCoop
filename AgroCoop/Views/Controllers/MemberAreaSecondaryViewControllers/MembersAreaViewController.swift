@@ -1,13 +1,13 @@
 //
-//  MainScreenViewController.swift
+//  MembersAreaViewController.swift
 //  AgroCoop
 //
-//  Created by Athanasios Tzikoulis on 14/1/24.
+//  Created by Athanasios Tzikoulis on 16/1/24.
 //
 
 import UIKit
 
-class ACMainScreenViewController: UIViewController {
+class MembersAreaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
