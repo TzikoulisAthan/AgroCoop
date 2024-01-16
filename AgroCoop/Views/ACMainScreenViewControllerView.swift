@@ -1,13 +1,13 @@
 //
-//  ACMenuButton.swift
+//  ACMainScreenViewControllerView.swift
 //  AgroCoop
 //
-//  Created by Athanasios Tzikoulis on 14/1/24.
+//  Created by Athanasios Tzikoulis on 16/1/24.
 //
 
 import UIKit
 
-class ACMenuButton: UIButton {
+class ACMainScreenViewControllerView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
