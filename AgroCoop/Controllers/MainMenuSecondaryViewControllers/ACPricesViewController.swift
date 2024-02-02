@@ -10,42 +10,38 @@ import UIKit
 /// Controller that handles the view of the product prices 
 final class ACPricesViewController: UIViewController {
     
-    //MARK: - Variables declaration
-    private let viewModel = ACPricesViewControllerViewModel()
-    let tableView: UITableView = {
-        let tableview = UITableView()
-        tableview.separatorStyle = .singleLine
-        tableview.rowHeight = 130
-        return tableview
-    }()
-
+    //MARK: - Variables declaration    
+    private let pricesView = ACPricesViewControllerView()
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
-        setupTableView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = true
+        self.tabBarController?.tabBar.isHidden = true
+
     }
     
     
     //MARK: - UI functions
-    private func setupTableView() {
-        tableView.register(ACPricesTableViewCell.self, forCellReuseIdentifier: Constants.TableViews.pricesTabelViewCellIdentifier)
-        tableView.frame = view.bounds
-        tableView.dataSource = viewModel
-    }
-    
-    
     private func setupUI() {
-        view.backgroundColor = .systemBackground
         title = "Current Prices"
         navigationController?.navigationBar.tintColor = Constants.Colors.buttonTitleColor
         navigationController?.navigationBar.prefersLargeTitles = true
-        view.addSubview(tableView)
+        view.addSubview(pricesView)
+        pricesView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            pricesView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            pricesView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            pricesView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            pricesView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
         
     }
 

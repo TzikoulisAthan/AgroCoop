@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct ACAnnouncementModel {
+    let announcementDate: Double
+    let announcementBody: String
+}

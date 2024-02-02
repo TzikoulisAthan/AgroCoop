@@ -23,7 +23,7 @@ final class ACTabBarController: UITabBarController {
     //MARK: - UI functions
     private func setupTabs() {
         let mainVC = ACMainScreenViewController()
-        let membersVC = ACMembersScreenViewController()
+        let membersVC = ACMembersScreenLoginViewController()
         
         membersVC.navigationItem.largeTitleDisplayMode = .automatic
         

@@ -7,23 +7,42 @@
 
 import UIKit
 
-class ACMembersAnnouncementsViewController: UIViewController {
+/// Responsible for showing announcements only for members of the coop
+final class ACMembersAnnouncementsViewController: UIViewController {
+    
+    //MARK: - Variable declaration
+    private let announcementsView = ACMembersAnnouncementsViewControllerView()
 
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.tabBarController?.tabBar.isHidden = true
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    
+    //MARK: - UI Functions
+    private func setupUI() {
+        view.backgroundColor = .systemBackground
+        title = "Announcements"
+        navigationController?.navigationBar.tintColor = Constants.Colors.buttonTitleColor
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        view.addSubview(announcementsView)
+        announcementsView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            announcementsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            announcementsView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            announcementsView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            announcementsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
 }

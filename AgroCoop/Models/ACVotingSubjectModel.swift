@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct ACVotingSubjectModel {
+    var votingSubjectDate: Double
+    var votingSubjectBody: String
+    var votesPro: Int
+    var votesCon: Int
+}

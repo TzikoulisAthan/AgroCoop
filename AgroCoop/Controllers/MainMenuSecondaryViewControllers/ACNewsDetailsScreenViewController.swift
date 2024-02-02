@@ -9,21 +9,48 @@ import UIKit
 
 class ACNewsDetailsScreenViewController: UIViewController {
 
+    //MARK: - Variable declaration
+    private let detailsView = ACNewsDetailsScreenViewControllerView()
+    private let viewModel = ACNewsViewControllerViewModel()
+    var articleTitle = String()
+    var articleBody = String()
+    
+    
+    //MARK: - Initializers
+    init(title: String, body: String) {
+        super.init(nibName: nil, bundle: nil)
+        
+        detailsView.configure(with: title, body: body)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    //MARK: - Functions
+    @objc func dismissVC() {
+        dismiss(animated: true)
     }
-    */
+    
+    //MARK: - UI Functions
+    private func setupUI() {
+        view.backgroundColor = .systemBackground
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(dismissVC))
+        view.addSubview(detailsView)
+        detailsView.translatesAutoresizingMaskIntoConstraints = false
+        
+        detailsView.frame = view.bounds
+    }
 
 }
