@@ -24,6 +24,7 @@
 		1318B3072B6AB50B00388545 /* ACNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B3062B6AB50B00388545 /* ACNewsTableViewCell.swift */; };
 		1318B3092B6B886800388545 /* ACNewsDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B3082B6B886800388545 /* ACNewsDetailsScreenViewController.swift */; };
 		1318B30B2B6B8AD700388545 /* ACNewsDetailsScreenViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B30A2B6B8AD700388545 /* ACNewsDetailsScreenViewControllerView.swift */; };
+		1318B32B2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B32A2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift */; };
 		13892ED62B5E583500AB6EE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13892ED52B5E583500AB6EE2 /* GoogleService-Info.plist */; };
 		13B06EEA2B5461AF00CF2653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B06EE92B5461AF00CF2653 /* AppDelegate.swift */; };
 		13B06EEC2B5461AF00CF2653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B06EEB2B5461AF00CF2653 /* SceneDelegate.swift */; };
@@ -60,7 +61,7 @@
 		13B6ED5D2B5ECE8700C73EA9 /* ACMembersScreenLoginViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6ED5C2B5ECE8700C73EA9 /* ACMembersScreenLoginViewControllerView.swift */; };
 		13B6ED5F2B5F2B3100C73EA9 /* ACMembersScreenViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6ED5E2B5F2B3100C73EA9 /* ACMembersScreenViewControllerView.swift */; };
 		13B6ED612B5FCA6900C73EA9 /* ACMembersAnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6ED602B5FCA6900C73EA9 /* ACMembersAnnouncementsViewController.swift */; };
-		13B6ED632B5FCA7700C73EA9 /* ACPricingPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6ED622B5FCA7700C73EA9 /* ACPricingPolicyViewController.swift */; };
+		13B6ED632B5FCA7700C73EA9 /* ACMembershipPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6ED622B5FCA7700C73EA9 /* ACMembershipPolicyViewController.swift */; };
 		13B6ED652B5FCAA800C73EA9 /* ACEditPricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6ED642B5FCAA800C73EA9 /* ACEditPricesViewController.swift */; };
 		13B6ED672B5FCAD300C73EA9 /* ACMembersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6ED662B5FCAD300C73EA9 /* ACMembersListViewController.swift */; };
 		13B6ED6B2B602B2D00C73EA9 /* ACEditPricesViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6ED6A2B602B2D00C73EA9 /* ACEditPricesViewControllerView.swift */; };
@@ -84,6 +85,7 @@
 		1318B3062B6AB50B00388545 /* ACNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACNewsTableViewCell.swift; sourceTree = "<group>"; };
 		1318B3082B6B886800388545 /* ACNewsDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACNewsDetailsScreenViewController.swift; sourceTree = "<group>"; };
 		1318B30A2B6B8AD700388545 /* ACNewsDetailsScreenViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACNewsDetailsScreenViewControllerView.swift; sourceTree = "<group>"; };
+		1318B32A2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMembershipPolicyViewControllerView.swift; sourceTree = "<group>"; };
 		13892ED52B5E583500AB6EE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13B06EE62B5461AF00CF2653 /* AgroCoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgroCoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B06EE92B5461AF00CF2653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +111,7 @@
 		13B6ED5C2B5ECE8700C73EA9 /* ACMembersScreenLoginViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMembersScreenLoginViewControllerView.swift; sourceTree = "<group>"; };
 		13B6ED5E2B5F2B3100C73EA9 /* ACMembersScreenViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMembersScreenViewControllerView.swift; sourceTree = "<group>"; };
 		13B6ED602B5FCA6900C73EA9 /* ACMembersAnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMembersAnnouncementsViewController.swift; sourceTree = "<group>"; };
-		13B6ED622B5FCA7700C73EA9 /* ACPricingPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPricingPolicyViewController.swift; sourceTree = "<group>"; };
+		13B6ED622B5FCA7700C73EA9 /* ACMembershipPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMembershipPolicyViewController.swift; sourceTree = "<group>"; };
 		13B6ED642B5FCAA800C73EA9 /* ACEditPricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACEditPricesViewController.swift; sourceTree = "<group>"; };
 		13B6ED662B5FCAD300C73EA9 /* ACMembersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMembersListViewController.swift; sourceTree = "<group>"; };
 		13B6ED6A2B602B2D00C73EA9 /* ACEditPricesViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACEditPricesViewControllerView.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				1318B3042B6AAEA400388545 /* ACNewsViewControllerView.swift */,
 				1318B30A2B6B8AD700388545 /* ACNewsDetailsScreenViewControllerView.swift */,
 				13B06F232B569F9400CF2653 /* Custom Elements */,
+				1318B32A2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				13B6ED602B5FCA6900C73EA9 /* ACMembersAnnouncementsViewController.swift */,
-				13B6ED622B5FCA7700C73EA9 /* ACPricingPolicyViewController.swift */,
+				13B6ED622B5FCA7700C73EA9 /* ACMembershipPolicyViewController.swift */,
 				13B6ED642B5FCAA800C73EA9 /* ACEditPricesViewController.swift */,
 				13B6ED662B5FCAD300C73EA9 /* ACMembersListViewController.swift */,
 				1318B2F62B67801500388545 /* ACPostAnnouncementOrVotingSubjectViewController.swift */,
@@ -395,10 +398,11 @@
 				1318B3092B6B886800388545 /* ACNewsDetailsScreenViewController.swift in Sources */,
 				13B6ED6B2B602B2D00C73EA9 /* ACEditPricesViewControllerView.swift in Sources */,
 				13B06F1E2B55537C00CF2653 /* ACPricesViewControllerViewModel.swift in Sources */,
-				13B6ED632B5FCA7700C73EA9 /* ACPricingPolicyViewController.swift in Sources */,
+				13B6ED632B5FCA7700C73EA9 /* ACMembershipPolicyViewController.swift in Sources */,
 				13B6ED672B5FCAD300C73EA9 /* ACMembersListViewController.swift in Sources */,
 				1318B3032B6A47B200388545 /* ErrorMessages.swift in Sources */,
 				1318B2F12B66C64400388545 /* ACMembersAnnouncementsViewModel.swift in Sources */,
+				1318B32B2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift in Sources */,
 				13B06F1A2B553FD800CF2653 /* ACPricesTableViewCell.swift in Sources */,
 				13B06F462B57C62E00CF2653 /* ACContactViewControllerView.swift in Sources */,
 				13B6ED612B5FCA6900C73EA9 /* ACMembersAnnouncementsViewController.swift in Sources */,

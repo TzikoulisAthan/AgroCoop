@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ACNewsDetailsScreenViewController: UIViewController {
+class ACNewsDetailsScreenViewController: UIViewController, ACNewsDetailsScreenViewControllerViewDelegate {
+
 
     //MARK: - Variable declaration
     private let detailsView = ACNewsDetailsScreenViewControllerView()
@@ -17,6 +18,11 @@ class ACNewsDetailsScreenViewController: UIViewController {
     
     
     //MARK: - Initializers
+    /// Data from the didSelectArticle method are passed to the viewcontroller responsible for handlling
+    /// the view. The data are then passed to the view via the configure funtion
+    /// - Parameters:
+    ///   - title: title of the article in the row of the tableview
+    ///   - body: body of the article in the row of the tableview
     init(title: String, body: String) {
         super.init(nibName: nil, bundle: nil)
         
@@ -32,7 +38,7 @@ class ACNewsDetailsScreenViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
-        
+        detailsView.delegate = self
     }
     
 
@@ -43,6 +49,12 @@ class ACNewsDetailsScreenViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    func didPressExitButton() {
+        dismiss(animated: true)
+
+    }
+    
+    
     //MARK: - UI Functions
     private func setupUI() {
         view.backgroundColor = .systemBackground
@@ -50,7 +62,12 @@ class ACNewsDetailsScreenViewController: UIViewController {
         view.addSubview(detailsView)
         detailsView.translatesAutoresizingMaskIntoConstraints = false
         
-        detailsView.frame = view.bounds
+        NSLayoutConstraint.activate([
+            detailsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            detailsView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            detailsView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            detailsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 
 }

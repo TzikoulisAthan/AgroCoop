@@ -22,7 +22,7 @@ final class ACContactFieldView: UIView {
     private var infoImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
-        
+        image.tintColor = UIColor.black
         return image
     }()
     
@@ -31,7 +31,7 @@ final class ACContactFieldView: UIView {
         label.textAlignment = .left
         label.font = UIFont(name: "Arial", size: 18)
         label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.75
+        label.minimumScaleFactor = 0.5
         return label
     }()
     
@@ -93,8 +93,8 @@ final class ACContactFieldView: UIView {
         infoTitle.translatesAutoresizingMaskIntoConstraints = false
         infoDetails.translatesAutoresizingMaskIntoConstraints = false
         
-        backgroundColor = .systemGray2
-        layer.borderColor = .none
+        //backgroundColor = .systemGray2
+        layer.borderWidth = 1
         layer.cornerRadius = 14
         heightAnchor.constraint(equalToConstant: 50).isActive = true
         

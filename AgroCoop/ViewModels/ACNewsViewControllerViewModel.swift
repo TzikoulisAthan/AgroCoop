@@ -24,6 +24,8 @@ class ACNewsViewControllerViewModel: NSObject {
     var articleTitles = [String]()
     var articleContent = [String]()
     
+    private let tableViewRowSpacing: CGFloat = 5
+    
     //MARK: - Functions
     
     /// Function responsible for decoding the json and returning the news articles
@@ -89,8 +91,25 @@ class ACNewsViewControllerViewModel: NSObject {
 
 
 extension ACNewsViewControllerViewModel: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return newsArray.count
+    }
+    
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return tableViewRowSpacing
+    }
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,7 +117,13 @@ extension ACNewsViewControllerViewModel: UITableViewDataSource, UITableViewDeleg
                                                  for: indexPath) as! ACNewsTableViewCell
         
         
-        cell.set(title: articleTitles[indexPath.row], body: articleContent[indexPath.row])
+        cell.set(title: articleTitles[indexPath.section], body: articleContent[indexPath.section])
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 1, height: 1)
+        cell.layer.shadowOpacity = 1
+        cell.layer.masksToBounds = false
+        cell.layer.cornerRadius = 2
+      
         return cell
     }
     

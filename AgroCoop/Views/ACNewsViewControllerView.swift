@@ -43,6 +43,12 @@ final class ACNewsViewControllerView: UIView, ACNewsViewControllerViewModelViewD
         tableView.reloadData()
     }
     
+    /// Function triggered when selecting a cell. It initializes the viecontroller for the detailsView
+    /// and passes the data. It then calls the protocol function presentDetailViewController
+    /// that passes to the delegate the parent viewcontroller the detailsViewController in order to load the details view
+    /// - Parameters:
+    ///   - articleTitle: <#articleTitle description#>
+    ///   - articleBody: <#articleBody description#>
     func didSelectArticle(articleTitle: String, articleBody: String) {
         let detailVC = ACNewsDetailsScreenViewController(title: articleTitle, body: articleBody)
         delegate?.presentDetailViewController(detailVC)
@@ -54,14 +60,14 @@ final class ACNewsViewControllerView: UIView, ACNewsViewControllerViewModelViewD
         addSubview(tableView)
         tableView.dataSource = viewModel
         tableView.delegate = viewModel
-        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(ACNewsTableViewCell.self, forCellReuseIdentifier: Constants.TableViews.newsTableViewCellIdentifier)
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            tableView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
-            tableView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
+            tableView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 10),
+            tableView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -10),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }

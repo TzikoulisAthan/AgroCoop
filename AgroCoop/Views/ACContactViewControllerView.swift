@@ -24,13 +24,15 @@ final class ACContactViewControllerView: UIView {
         return imageview
     }()
     
-    private let phoneInfoView = ACContactFieldView(infoImage: "phone.circle", infoDetails: "6944629288")
-    private let emailInfoView = ACContactFieldView(infoImage: "cloud", infoDetails: "www.in.gr")
+    private let phoneInfoView = ACContactFieldView(infoImage: "phone.circle", infoDetails: "24109171909")
+    private let emailInfoView = ACContactFieldView(infoImage: "envelope", infoDetails: "info@coop.com")
+    private let addressInfoView = ACContactFieldView(infoImage: "mappin.and.ellipse", infoDetails: "Platikabos")
     
     //MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+       
         configureImage()
         configureStackView()
         addToStackView()
@@ -45,6 +47,7 @@ final class ACContactViewControllerView: UIView {
     private func addToStackView() {
         stackView.addArrangedSubview(phoneInfoView)
         stackView.addArrangedSubview(emailInfoView)
+        stackView.addArrangedSubview(addressInfoView)
     }
     
     

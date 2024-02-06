@@ -77,7 +77,9 @@ final class ACMembersScreenLoginViewControllerView: UIView {
     
     //MARK: - Selectors
     @objc func loginButtonPressed() {
-        //TODO: Implement checks for email and password field
+        
+        //TODO: Implement textfield validation
+        
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             print("Invalid login credentials")
             return

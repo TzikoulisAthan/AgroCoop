@@ -54,7 +54,7 @@ final class ACMembersScreenViewController: UIViewController, ACMembersScreenDele
             let vc = ACMembersListViewController()
             navigationController?.pushViewController(vc, animated: true)
         case Constants.ButtonLabels.pricingPolicyButtonLabel:
-            let vc = ACPricingPolicyViewController()
+            let vc = ACMembershipPolicyViewController()
             navigationController?.pushViewController(vc, animated: true)
         case Constants.ButtonLabels.membersAnnouncementsButtonLabel:
             let vc = ACMembersAnnouncementsViewController()

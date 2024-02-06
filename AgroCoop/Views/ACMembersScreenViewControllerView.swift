@@ -19,7 +19,7 @@ final class ACMembersScreenViewControllerView: UIView {
     private let membersListButton = ACMenuButton(title: Constants.ButtonLabels.membersListButtonLabel)
     private let editPricesButton = ACMenuButton(title: Constants.ButtonLabels.editPricesButtonLabel)
     private let postAnnouncementButton = ACMenuButton(title: Constants.ButtonLabels.postAnnouncementButtonLabel)
-    private let pricingPolicyButton = ACMenuButton(title: Constants.ButtonLabels.pricingPolicyButtonLabel)
+    private let membershipPolicyButton = ACMenuButton(title: Constants.ButtonLabels.pricingPolicyButtonLabel)
     
     var delegate: ACMembersScreenDelegate?
     
@@ -63,7 +63,7 @@ final class ACMembersScreenViewControllerView: UIView {
     
     //MARK: - UI Functions
     private func setupUI() {
-        let views = [membersAnnouncementsButton, membersListButton, editPricesButton, postAnnouncementButton, pricingPolicyButton]
+        let views = [membersAnnouncementsButton, membersListButton, editPricesButton, postAnnouncementButton, membershipPolicyButton]
         
         for everyView in views {
             addSubview(everyView)
@@ -74,18 +74,18 @@ final class ACMembersScreenViewControllerView: UIView {
         membersListButton.addTarget(self, action: #selector(membersListButtonTapped), for: .touchUpInside)
         editPricesButton.addTarget(self, action: #selector(editPricesButtonTapped), for: .touchUpInside)
         postAnnouncementButton.addTarget(self, action: #selector(postAnnouncementButtonTapped), for: .touchUpInside)
-        pricingPolicyButton.addTarget(self, action: #selector(pricingPolicyButtonTapped), for: .touchUpInside)
+        membershipPolicyButton.addTarget(self, action: #selector(pricingPolicyButtonTapped), for: .touchUpInside)
         
         
         let buttonPadding: CGFloat = 70
         
         NSLayoutConstraint.activate([
-            pricingPolicyButton.topAnchor.constraint(equalTo: topAnchor, constant: 90),
-            pricingPolicyButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: buttonPadding),
-            pricingPolicyButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -buttonPadding),
-            pricingPolicyButton.heightAnchor.constraint(equalToConstant: 52),
+            membershipPolicyButton.topAnchor.constraint(equalTo: topAnchor, constant: 90),
+            membershipPolicyButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: buttonPadding),
+            membershipPolicyButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -buttonPadding),
+            membershipPolicyButton.heightAnchor.constraint(equalToConstant: 52),
             
-            membersAnnouncementsButton.topAnchor.constraint(equalTo: pricingPolicyButton.bottomAnchor, constant: 30),
+            membersAnnouncementsButton.topAnchor.constraint(equalTo: membershipPolicyButton.bottomAnchor, constant: 30),
             membersAnnouncementsButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: buttonPadding),
             membersAnnouncementsButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -buttonPadding),
             membersAnnouncementsButton.heightAnchor.constraint(equalToConstant: 52),

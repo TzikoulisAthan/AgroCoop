@@ -32,7 +32,7 @@ struct Constants {
         static let newsButtonLabel = "News"
         static let entopioButtonLabel = "E-Ntopio"
         static let membersAnnouncementsButtonLabel = "Latest Announcements"
-        static let pricingPolicyButtonLabel = "Pricing Policy"
+        static let pricingPolicyButtonLabel = "Articles of Incorporation"
         static let membersListButtonLabel = "Member List"
         static let editPricesButtonLabel = "Edit Prices"
         static let postAnnouncementButtonLabel = "New Announcement"
@@ -55,4 +55,7 @@ struct Constants {
         static let votesCon = "votesCon"
     }
     
+    struct StaticTexts {
+        static let articlesOfIncorporation = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n 1. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\n 2. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    }
 }

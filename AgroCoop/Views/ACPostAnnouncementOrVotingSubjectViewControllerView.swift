@@ -70,6 +70,9 @@ class ACPostAnnouncementOrVotingSubjectViewControllerView: UIView {
     //MARK: - Functions
     
     @objc func didTapSaveButton() {
+        
+        //TODO: Implement textfield validation
+        
         guard let textBody = bodyTextField.text else {
             return
         }
