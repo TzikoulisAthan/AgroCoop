@@ -4,4 +4,5 @@
 
 It is a simple and straight forward UI/UX designed app since the target users are not tech literate.
 
-![309225613_426859822867832_6051711731525159800_n](https://github.com/TzikoulisAthan/AgroCoop/assets/22316341/bad1da35-e57d-432c-84bc-569b3a8f0b5f)
+![309225613_426859822867832_6051711731525159800_n](https://github.com/TzikoulisAthan/AgroCoop/assets/22316341/7f026d40-b73d-4e20-b44e-6001ae6c1795)
+
