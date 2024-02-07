@@ -30,7 +30,7 @@ final class ACMembersScreenViewController: UIViewController, ACMembersScreenDele
     
     override func viewWillAppear(_ animated: Bool) {
         tabBarController?.tabBar.tintColor = Constants.Colors.buttonTitleColor
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         self.tabBarController?.tabBar.isHidden = false
     }
     
@@ -55,6 +55,11 @@ final class ACMembersScreenViewController: UIViewController, ACMembersScreenDele
             navigationController?.pushViewController(vc, animated: true)
         case Constants.ButtonLabels.pricingPolicyButtonLabel:
             let vc = ACMembershipPolicyViewController()
+            vc.navigationController?.navigationBar.prefersLargeTitles = false
+//            let titleFont = UIFont.systemFont(ofSize: 8)
+//            vc.navigationController?.navigationBar.titleTextAttributes = [
+//                NSAttributedString.Key.font:titleFont
+//            ]
             navigationController?.pushViewController(vc, animated: true)
         case Constants.ButtonLabels.membersAnnouncementsButtonLabel:
             let vc = ACMembersAnnouncementsViewController()

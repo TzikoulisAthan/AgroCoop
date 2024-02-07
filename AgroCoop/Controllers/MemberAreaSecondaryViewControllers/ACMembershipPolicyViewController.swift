@@ -21,7 +21,6 @@ final class ACMembershipPolicyViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.prefersLargeTitles = false
         self.tabBarController?.tabBar.isHidden = true
     }
     
@@ -34,11 +33,13 @@ final class ACMembershipPolicyViewController: UIViewController {
         view.addSubview(membershipPolicyView)
         membershipPolicyView.translatesAutoresizingMaskIntoConstraints = false
         
+        let padding: CGFloat = 10
+        
         NSLayoutConstraint.activate([
-            membershipPolicyView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            membershipPolicyView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
-            membershipPolicyView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
-            membershipPolicyView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
+            membershipPolicyView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: padding),
+            membershipPolicyView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            membershipPolicyView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            membershipPolicyView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(padding*3))
         ])
     }
 }

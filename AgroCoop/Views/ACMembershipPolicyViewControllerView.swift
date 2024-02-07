@@ -17,8 +17,13 @@ class ACMembershipPolicyViewControllerView: UIView {
         label.numberOfLines = 0
         label.textColor = UIColor.darkGray
         label.textAlignment = .justified
-        
         return label
+    }()
+    
+    private let scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        
+        return sv
     }()
     
     //MARK: - Initializers
@@ -42,17 +47,29 @@ class ACMembershipPolicyViewControllerView: UIView {
         layer.shadowColor = UIColor.gray.cgColor
         layer.cornerRadius = 8
         
-        addSubview(contentLabel)
+        addSubview(scrollView)
+        scrollView.addSubview(contentLabel)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         contentLabel.text = Constants.StaticTexts.articlesOfIncorporation
         
         let padding: CGFloat = 10
         
         NSLayoutConstraint.activate([
-            contentLabel.topAnchor.constraint(equalTo: topAnchor, constant: padding),
-            contentLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
-            contentLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
-            contentLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding)
+            scrollView.topAnchor.constraint(equalTo: topAnchor, constant: padding),
+            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
+            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
+            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding),
+            
+            contentLabel.topAnchor.constraint(equalTo:      scrollView.topAnchor),
+            contentLabel.leadingAnchor.constraint(equalTo:  scrollView.leadingAnchor),
+            contentLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentLabel.bottomAnchor.constraint(equalTo:   scrollView.bottomAnchor),
+            
+            contentLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
         ])
+        
+
     }
 }
