@@ -14,6 +14,12 @@ final class ACMembersScreenLoginViewController: UIViewController, ACMembersLogin
 
     //MARK: - Variable declaration
     private let membersAreaLoginView = ACMembersScreenLoginViewControllerView()
+    
+    let gradientLayer: CAGradientLayer = {
+        let layer = CAGradientLayer()
+        layer.colors = [UIColor.white.cgColor, UIColor.green.withAlphaComponent(1).cgColor]
+        return layer
+    }()
 
     //MARK: - Lifecycle
     override func viewDidLoad() {

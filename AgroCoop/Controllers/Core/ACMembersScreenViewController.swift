@@ -21,8 +21,12 @@ final class ACMembersScreenViewController: UIViewController, ACMembersScreenDele
         view.backgroundColor = .systemBackground
         title = "Welcome Member"
         navigationItem.hidesBackButton = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"), style: .done, target: self, action: #selector(doneButtonPressed))
-
+        
+        // Create a button in navigation controller that pops a menu
+        let button = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"))
+        button.menu = addMenu()
+        navigationItem.rightBarButtonItem = button
+        
         setupUI()
         
         membersScreenView.delegate = self
@@ -33,19 +37,7 @@ final class ACMembersScreenViewController: UIViewController, ACMembersScreenDele
         navigationController?.navigationBar.prefersLargeTitles = false
         self.tabBarController?.tabBar.isHidden = false
     }
-    
-    //MARK: - Selectors
-    @objc func doneButtonPressed() {
-           
-           do {
-               try FirebaseAuth.Auth.auth().signOut()
-               navigationController?.popToRootViewController(animated: true)
-               print("signing out")
-           } catch {
-               print("Error")
-           }
-       }
-    
+
     
     //MARK: - Functions
     func didTapMenuButton(buttonName: String) {
@@ -56,10 +48,6 @@ final class ACMembersScreenViewController: UIViewController, ACMembersScreenDele
         case Constants.ButtonLabels.pricingPolicyButtonLabel:
             let vc = ACMembershipPolicyViewController()
             vc.navigationController?.navigationBar.prefersLargeTitles = false
-//            let titleFont = UIFont.systemFont(ofSize: 8)
-//            vc.navigationController?.navigationBar.titleTextAttributes = [
-//                NSAttributedString.Key.font:titleFont
-//            ]
             navigationController?.pushViewController(vc, animated: true)
         case Constants.ButtonLabels.membersAnnouncementsButtonLabel:
             let vc = ACMembersAnnouncementsViewController()
@@ -73,6 +61,36 @@ final class ACMembersScreenViewController: UIViewController, ACMembersScreenDele
         default:
             break
         }
+    }
+    
+    
+    /// Function creates a dropdown menu
+    /// - Returns: Menu containing menuitems. Each menuitem has its own funcionality
+    private func addMenu() -> UIMenu {
+        let menuItems = UIMenu(title:"", options: .displayInline, children: [
+            
+            UIAction(title: "Setting", image: UIImage(systemName: "gearshape"), handler: { action in
+                
+                let vc = ACEditPricesViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+            }),
+            
+            UIAction(title: "Log out", image: UIImage(systemName: "pip.exit"), handler: { action in
+                
+                do {
+                    try FirebaseAuth.Auth.auth().signOut()
+                    self.navigationController?.popToRootViewController(animated: true)
+                    print("signing out")
+                } catch {
+                    print("Error")
+                }
+                
+            }),
+            
+        ])
+        
+        return menuItems
     }
     
     //MARK: - UI Functions

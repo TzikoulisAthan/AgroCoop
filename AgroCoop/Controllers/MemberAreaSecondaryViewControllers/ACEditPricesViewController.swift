@@ -62,8 +62,11 @@ final class ACEditPricesViewController: UIViewController, ACEditPricesDelegate {
         NSLayoutConstraint.activate([
             editPricesView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             editPricesView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            editPricesView.widthAnchor.constraint(equalToConstant: 280),
+            editPricesView.widthAnchor.constraint(equalToConstant: 300),
             editPricesView.heightAnchor.constraint(equalToConstant: 520)
         ])
+        
+        editPricesView.addGradientBackground()
+
     }
 }

@@ -25,6 +25,10 @@
 		1318B3092B6B886800388545 /* ACNewsDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B3082B6B886800388545 /* ACNewsDetailsScreenViewController.swift */; };
 		1318B30B2B6B8AD700388545 /* ACNewsDetailsScreenViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B30A2B6B8AD700388545 /* ACNewsDetailsScreenViewControllerView.swift */; };
 		1318B32B2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B32A2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift */; };
+		1318B32D2B760F0B00388545 /* ACVotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B32C2B760F0B00388545 /* ACVotingViewController.swift */; };
+		1318B32F2B760F5200388545 /* ACVotingViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B32E2B760F5200388545 /* ACVotingViewControllerView.swift */; };
+		1318B3312B76283C00388545 /* ACVotingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B3302B76283C00388545 /* ACVotingTableViewCell.swift */; };
+		1318B3332B76292900388545 /* ACVotingViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B3322B76292900388545 /* ACVotingViewControllerViewModel.swift */; };
 		13892ED62B5E583500AB6EE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13892ED52B5E583500AB6EE2 /* GoogleService-Info.plist */; };
 		13B06EEA2B5461AF00CF2653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B06EE92B5461AF00CF2653 /* AppDelegate.swift */; };
 		13B06EEC2B5461AF00CF2653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B06EEB2B5461AF00CF2653 /* SceneDelegate.swift */; };
@@ -86,6 +90,10 @@
 		1318B3082B6B886800388545 /* ACNewsDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACNewsDetailsScreenViewController.swift; sourceTree = "<group>"; };
 		1318B30A2B6B8AD700388545 /* ACNewsDetailsScreenViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACNewsDetailsScreenViewControllerView.swift; sourceTree = "<group>"; };
 		1318B32A2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMembershipPolicyViewControllerView.swift; sourceTree = "<group>"; };
+		1318B32C2B760F0B00388545 /* ACVotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACVotingViewController.swift; sourceTree = "<group>"; };
+		1318B32E2B760F5200388545 /* ACVotingViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACVotingViewControllerView.swift; sourceTree = "<group>"; };
+		1318B3302B76283C00388545 /* ACVotingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACVotingTableViewCell.swift; sourceTree = "<group>"; };
+		1318B3322B76292900388545 /* ACVotingViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACVotingViewControllerViewModel.swift; sourceTree = "<group>"; };
 		13892ED52B5E583500AB6EE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13B06EE62B5461AF00CF2653 /* AgroCoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgroCoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B06EE92B5461AF00CF2653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 				1318B2F82B6780F100388545 /* ACPostAnnouncementOrVotingSubjectViewControllerView.swift */,
 				1318B3042B6AAEA400388545 /* ACNewsViewControllerView.swift */,
 				1318B30A2B6B8AD700388545 /* ACNewsDetailsScreenViewControllerView.swift */,
+				1318B32E2B760F5200388545 /* ACVotingViewControllerView.swift */,
 				13B06F232B569F9400CF2653 /* Custom Elements */,
 				1318B32A2B72A96B00388545 /* ACMembershipPolicyViewControllerView.swift */,
 			);
@@ -250,6 +259,7 @@
 				13B6ED642B5FCAA800C73EA9 /* ACEditPricesViewController.swift */,
 				13B6ED662B5FCAD300C73EA9 /* ACMembersListViewController.swift */,
 				1318B2F62B67801500388545 /* ACPostAnnouncementOrVotingSubjectViewController.swift */,
+				1318B32C2B760F0B00388545 /* ACVotingViewController.swift */,
 			);
 			path = MemberAreaSecondaryViewControllers;
 			sourceTree = "<group>";
@@ -269,6 +279,7 @@
 				13B06F192B553FD800CF2653 /* ACPricesTableViewCell.swift */,
 				1318B2F22B66C7C000388545 /* ACMembersAnnouncementsTableViewCell.swift */,
 				1318B3062B6AB50B00388545 /* ACNewsTableViewCell.swift */,
+				1318B3302B76283C00388545 /* ACVotingTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -281,6 +292,7 @@
 				1318B2F02B66C64400388545 /* ACMembersAnnouncementsViewModel.swift */,
 				1318B2FA2B678A9300388545 /* ACPostAnnouncementOrVotingSubjectViewModel.swift */,
 				1318B2FE2B6A43CB00388545 /* ACNewsViewControllerViewModel.swift */,
+				1318B3322B76292900388545 /* ACVotingViewControllerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -423,6 +435,7 @@
 				13B06EEC2B5461AF00CF2653 /* SceneDelegate.swift in Sources */,
 				13B6ED5F2B5F2B3100C73EA9 /* ACMembersScreenViewControllerView.swift in Sources */,
 				1318B2FD2B68E72900388545 /* ACVotingSubjectModel.swift in Sources */,
+				1318B3332B76292900388545 /* ACVotingViewControllerViewModel.swift in Sources */,
 				1318B3052B6AAEA400388545 /* ACNewsViewControllerView.swift in Sources */,
 				1318B2F52B677ECA00388545 /* ACAnnouncementModel.swift in Sources */,
 				13B06F252B569FF000CF2653 /* ACMainScreenViewControllerView.swift in Sources */,
@@ -433,7 +446,10 @@
 				13B6ED5B2B5ECDFE00C73EA9 /* ACMembersScreenLoginViewController.swift in Sources */,
 				13B06F0E2B5523CD00CF2653 /* ACPricesViewController.swift in Sources */,
 				1318B2F32B66C7C000388545 /* ACMembersAnnouncementsTableViewCell.swift in Sources */,
+				1318B3312B76283C00388545 /* ACVotingTableViewCell.swift in Sources */,
 				13B06F112B55250100CF2653 /* Constants.swift in Sources */,
+				1318B32D2B760F0B00388545 /* ACVotingViewController.swift in Sources */,
+				1318B32F2B760F5200388545 /* ACVotingViewControllerView.swift in Sources */,
 				1318B2EF2B66C30A00388545 /* ACMembersAnnouncementsViewControllerView.swift in Sources */,
 				13B06F152B5526B100CF2653 /* ACNewsViewController.swift in Sources */,
 				13B06F442B5708F200CF2653 /* ProductPricesModel.swift in Sources */,

@@ -24,6 +24,7 @@ struct Constants {
         static let pricesTabelViewCellIdentifier = "pricesTableViewCellIdentifier"
         static let membersAnnouncementsTableViewCellIdentifier = "membersAnnouncementsTableViewCellIdentifier"
         static let newsTableViewCellIdentifier = "newsTableViewCellIdentifier"
+        static let votingTableViewCellIdentifier = "votingTableViewCellIdentifier"
     }
     
     struct ButtonLabels {
@@ -48,11 +49,13 @@ struct Constants {
         static let announcementsCollection = "Announcements"
         static let announcementBody = "announcementBody"
         static let announcementDate = "announcementDate"
+        
         static let votingSubjectCollection = "VotingSubject"
         static let votingSubjectBody = "votingSubjectBody"
         static let votingSubjectDate = "votingSubjectDate"
         static let votesPro = "votesPro"
         static let votesCon = "votesCon"
+        
     }
     
     struct StaticTexts {

@@ -16,41 +16,51 @@ protocol ACEditPricesDelegate {
 final class ACEditPricesViewControllerView: UIView {
     
     //MARK: - Variable declaration
-    let containerView = UIView()
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Change product prices"
         label.font = UIFont.systemFont(ofSize: 26)
+        label.textColor = .white
+        label.layer.backgroundColor = UIColor.systemGreen.cgColor
+        label.layer.cornerRadius = 3
+        label.layer.shadowColor = UIColor.gray.cgColor
+        label.layer.shadowOffset = CGSize(width: 1, height: 1)
+        label.layer.shadowOpacity = 1
         return label
     }()
     private let barleyLabel: UILabel = {
         let label = UILabel()
         label.text = "Barley:"
         label.font = UIFont.systemFont(ofSize: 24)
+        label.textColor = .systemBlue
         return label
     }()
     private let cloverLabel: UILabel = {
         let label = UILabel()
         label.text = "Alfalfa:"
         label.font = UIFont.systemFont(ofSize: 24)
+        label.textColor = .systemBlue
         return label
     }()
     private let cornLabel: UILabel = {
         let label = UILabel()
         label.text = "Corn:"
         label.font = UIFont.systemFont(ofSize: 24)
+        label.textColor = .systemBlue
         return label
     }()
     private let cottonLabel: UILabel = {
         let label = UILabel()
         label.text = "Cotton:"
         label.font = UIFont.systemFont(ofSize: 24)
+        label.textColor = .systemBlue
         return label
     }()
     private let wheatLabel: UILabel = {
         let label = UILabel()
         label.text = "Wheat:"
         label.font = UIFont.systemFont(ofSize: 24)
+        label.textColor = .systemBlue
         return label
     }()
     
@@ -111,6 +121,7 @@ final class ACEditPricesViewControllerView: UIView {
         super.init(frame: frame)
         
         setupUI()
+        addGradientBackground()
     }
     
     required init?(coder: NSCoder) {
@@ -144,15 +155,15 @@ final class ACEditPricesViewControllerView: UIView {
         }
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: padding),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: padding*2),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 28),
             
-            barleyLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
+            barleyLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding*2),
             barleyLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             barleyLabel.widthAnchor.constraint(equalToConstant: 140),
             
-            barleyTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
+            barleyTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding*2),
             barleyTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             barleyTextField.widthAnchor.constraint(equalToConstant: 110),
             
@@ -196,6 +207,16 @@ final class ACEditPricesViewControllerView: UIView {
             cancelButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             cancelButton.widthAnchor.constraint(equalToConstant: 140)
         ])
+    }
+    
+    func addGradientBackground() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = [UIColor.red.cgColor, UIColor.white.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        //layer.addSublayer(gradientLayer)
+        layer.insertSublayer(gradientLayer, at: 0)
     }
     
 }

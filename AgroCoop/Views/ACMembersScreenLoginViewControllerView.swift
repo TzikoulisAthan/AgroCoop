@@ -64,7 +64,7 @@ final class ACMembersScreenLoginViewControllerView: UIView {
     
     var delegate: ACMembersLoginDelegate?
     
-    //MARK: - Initialization
+    //MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -78,7 +78,7 @@ final class ACMembersScreenLoginViewControllerView: UIView {
     //MARK: - Selectors
     @objc func loginButtonPressed() {
         
-        //TODO: Implement textfield validation
+        //TODO: IMPLEMENT TEXTFIELD VALIDATION
         
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             print("Invalid login credentials")
