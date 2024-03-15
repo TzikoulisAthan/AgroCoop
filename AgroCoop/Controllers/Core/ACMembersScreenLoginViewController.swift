@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 
 
+//TODO: Add pod to push textfields up not to be covered by the keyboard
+
 /// Handles the functionality for logging into the Member's Area
 final class ACMembersScreenLoginViewController: UIViewController, ACMembersLoginDelegate {
 
@@ -31,19 +33,30 @@ final class ACMembersScreenLoginViewController: UIViewController, ACMembersLogin
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = false
+        tabBarController?.tabBar.isHidden = false
     }
     
     //MARK: - Functions
     func didTapLogin(email: String, password: String) {
         
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             guard let self = self else { return }
+            
+            guard error == nil else {
+                print(error)
+                return
+            }
             
             let vc = ACMembersScreenViewController()
             vc.title = "Members Area"
             navigationController?.pushViewController(vc, animated: true)
         }
         
+    }
+    
+    func didTapCreateAccount() {
+        let vc = ACContactViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

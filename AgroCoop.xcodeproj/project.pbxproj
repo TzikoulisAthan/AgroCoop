@@ -29,6 +29,7 @@
 		1318B32F2B760F5200388545 /* ACVotingViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B32E2B760F5200388545 /* ACVotingViewControllerView.swift */; };
 		1318B3312B76283C00388545 /* ACVotingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B3302B76283C00388545 /* ACVotingTableViewCell.swift */; };
 		1318B3332B76292900388545 /* ACVotingViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1318B3322B76292900388545 /* ACVotingViewControllerViewModel.swift */; };
+		1319A2C22BA4BF7900EFF176 /* ACUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319A2C12BA4BF7900EFF176 /* ACUserProfileViewController.swift */; };
 		13892ED62B5E583500AB6EE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13892ED52B5E583500AB6EE2 /* GoogleService-Info.plist */; };
 		13B06EEA2B5461AF00CF2653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B06EE92B5461AF00CF2653 /* AppDelegate.swift */; };
 		13B06EEC2B5461AF00CF2653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B06EEB2B5461AF00CF2653 /* SceneDelegate.swift */; };
@@ -94,6 +95,7 @@
 		1318B32E2B760F5200388545 /* ACVotingViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACVotingViewControllerView.swift; sourceTree = "<group>"; };
 		1318B3302B76283C00388545 /* ACVotingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACVotingTableViewCell.swift; sourceTree = "<group>"; };
 		1318B3322B76292900388545 /* ACVotingViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACVotingViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1319A2C12BA4BF7900EFF176 /* ACUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACUserProfileViewController.swift; sourceTree = "<group>"; };
 		13892ED52B5E583500AB6EE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13B06EE62B5461AF00CF2653 /* AgroCoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgroCoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B06EE92B5461AF00CF2653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				13B6ED662B5FCAD300C73EA9 /* ACMembersListViewController.swift */,
 				1318B2F62B67801500388545 /* ACPostAnnouncementOrVotingSubjectViewController.swift */,
 				1318B32C2B760F0B00388545 /* ACVotingViewController.swift */,
+				1319A2C12BA4BF7900EFF176 /* ACUserProfileViewController.swift */,
 			);
 			path = MemberAreaSecondaryViewControllers;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				1318B32F2B760F5200388545 /* ACVotingViewControllerView.swift in Sources */,
 				1318B2EF2B66C30A00388545 /* ACMembersAnnouncementsViewControllerView.swift in Sources */,
 				13B06F152B5526B100CF2653 /* ACNewsViewController.swift in Sources */,
+				1319A2C22BA4BF7900EFF176 /* ACUserProfileViewController.swift in Sources */,
 				13B06F442B5708F200CF2653 /* ProductPricesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

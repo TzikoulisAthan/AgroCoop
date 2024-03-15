@@ -10,6 +10,7 @@ import UIKit
 //MARK: - Protocol for interacting with login button
 protocol ACMembersLoginDelegate {
     func didTapLogin(email: String, password: String)
+    func didTapCreateAccount()
 }
 
 /// View of the ACMembersScreenLoginViewController
@@ -62,6 +63,21 @@ final class ACMembersScreenLoginViewControllerView: UIView {
         return button
     }()
     
+    private let createAccountButton: UIButton = {
+        let button = UIButton()
+        let stringAttributes: [NSAttributedString.Key:Any] = [
+            .font:UIFont.systemFont(ofSize: 13),
+            .foregroundColor:Constants.Colors.buttonTitleColor,
+            .underlineStyle:NSUnderlineStyle.single.rawValue
+        ]
+        let attributedString = NSMutableAttributedString(string: "Don't have an account? Request one", attributes: stringAttributes)
+
+        button.setAttributedTitle(attributedString, for: .normal)
+        button.addTarget(self, action: #selector(newAccountButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    
     var delegate: ACMembersLoginDelegate?
     
     //MARK: - Initializers
@@ -88,14 +104,19 @@ final class ACMembersScreenLoginViewControllerView: UIView {
         delegate?.didTapLogin(email: email, password: password)
     }
     
+    @objc func newAccountButtonPressed() {
+        delegate?.didTapCreateAccount()
+    }
+    
     //MARK: - UI Methods
     private func setupUI() {
-        let views = [welcomeLabel, emailTextField, passwordTextField, loginButton]
+        let views = [welcomeLabel, emailTextField, passwordTextField, loginButton, createAccountButton]
         
         for everyView in views {
             addSubview(everyView)
             everyView.translatesAutoresizingMaskIntoConstraints = false
         }
+        
         
         NSLayoutConstraint.activate([
             welcomeLabel.topAnchor.constraint(equalTo: topAnchor),
@@ -116,7 +137,13 @@ final class ACMembersScreenLoginViewControllerView: UIView {
             loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 60),
             loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             loginButton.widthAnchor.constraint(equalToConstant: 110),
-            loginButton.heightAnchor.constraint(equalToConstant: 60)
+            loginButton.heightAnchor.constraint(equalToConstant: 60),
+            
+            createAccountButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
+            createAccountButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            createAccountButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
+            createAccountButton.heightAnchor.constraint(equalToConstant: 15)
+            
         ])
     }
     

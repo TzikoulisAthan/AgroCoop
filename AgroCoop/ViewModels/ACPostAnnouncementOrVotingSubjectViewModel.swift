@@ -16,6 +16,7 @@ protocol ACPostAnnouncementOrVotingSubjectViewModelDelegate {
 
 
 class ACPostAnnouncementOrVotingSubjectViewModel: NSObject, ACPostAnnouncementOrVotingSubjectViewDelegate {
+  
     
     //MARK: - Variable declaration
     private var postAnnouncementView = ACPostAnnouncementOrVotingSubjectViewControllerView()
@@ -72,4 +73,7 @@ class ACPostAnnouncementOrVotingSubjectViewModel: NSObject, ACPostAnnouncementOr
             }
         }
     }
+    
+    //TODO: Create a push notification every time there is a new announcement/voting subject
+    
 }

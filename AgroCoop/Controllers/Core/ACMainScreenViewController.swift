@@ -40,7 +40,7 @@ final class ACMainScreenViewController: UIViewController, ACMainScreenViewContro
             navigationController?.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(priceVC, animated: true)
         case Constants.ButtonLabels.contactButtonLabel:
-            let contactVC = ACVotingViewController()
+            let contactVC = ACContactViewController()
             navigationController?.pushViewController(contactVC, animated: true)
         case Constants.ButtonLabels.newsButtonLabel:
             let newsVC = ACNewsViewController()

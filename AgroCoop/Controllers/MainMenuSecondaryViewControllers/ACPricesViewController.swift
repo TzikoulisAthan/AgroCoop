@@ -5,6 +5,9 @@
 //  Created by Athanasios Tzikoulis on 15/1/24.
 //
 
+//TODO: IMPLEMENT AN EMPTY STATE SCREEN. USE IN ANY VIEWCONTROLLER THAT PERFORMS NETWORK TASKS
+
+
 import UIKit
 
 /// Controller that handles the view of the product prices 

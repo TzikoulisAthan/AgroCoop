@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ACPostAnnouncementOrVotingSubjectViewController: UIViewController, ACPostAnnouncementOrVotingSubjectViewModelDelegate {
+class ACPostAnnouncementOrVotingSubjectViewController: UIViewController, ACPostAnnouncementOrVotingSubjectViewModelDelegate, ACPostAnnouncementOrVotingSubjectViewDelegate {
 
     //MARK: - Variable declaration
     private let postView = ACPostAnnouncementOrVotingSubjectViewControllerView()
@@ -20,17 +20,22 @@ class ACPostAnnouncementOrVotingSubjectViewController: UIViewController, ACPostA
         setupUI()
         
         postView.delegate = postViewModel
+        postView.delegate = self
         postViewModel.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         self.tabBarController?.tabBar.isHidden = true
 
     }
     
     //MARK: - Functions
     func dismissViewController() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func didTapCancelButton() {
         navigationController?.popViewController(animated: true)
     }
     
@@ -49,3 +54,4 @@ class ACPostAnnouncementOrVotingSubjectViewController: UIViewController, ACPostA
         ])
     }
 }
+
